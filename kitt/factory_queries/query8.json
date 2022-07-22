@@ -1,0 +1,14 @@
+{
+    "search": {
+        "IN=f:Data_State":{
+            "<dt:hasData<": {
+                "R=dt:Asset": null
+            }
+        }
+    },
+    "return": [
+        "R.a",
+        "IN.id",
+        "IN.p/key"
+    ]
+}

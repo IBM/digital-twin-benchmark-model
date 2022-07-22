@@ -1,0 +1,20 @@
+{
+  "search": {
+    "Z=ub:Course": {
+      "<ub:teacherOf<": {
+        "Y=ub:Professor": {
+          "<ub:advisor<": {
+            "X=ub:Student": {
+              "ub:takesCourse": {
+                "ub:Course#~Z": null
+                }
+              }
+            }
+          }
+        }
+    }
+  },
+  "return": [
+    "ALL.id"
+  ]
+}

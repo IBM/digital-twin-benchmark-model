@@ -1,0 +1,18 @@
+{
+    "search": {
+        "IN=f:Data_Power":{
+            "<dt:hasData<": {
+                "R=dt:Asset": {
+                    "<dt:hasPart<":{
+                        "L=dt:Location": null
+                    }
+                }
+            }
+        }
+    },
+    "return": [
+        "L.id",
+        "IN.id",
+        "IN.p/key"
+    ]
+}

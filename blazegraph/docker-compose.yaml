@@ -1,0 +1,9 @@
+blazegraph:
+  image: metaphacts/blazegraph-basic
+  volumes:
+    - ./cfg/RWStore.properties:/config/RWStore.properties
+  environment:
+    TDB: "2"
+  privileged: true
+  ports:
+    - "8889:8080"

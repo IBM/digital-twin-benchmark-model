@@ -1,0 +1,13 @@
+{
+    "search": {
+        "R=f:Robot": {
+            "f:hasWorkorder": {
+                "W=f:Workorder | EQ(p/open,true)": null
+            }
+        }
+    },
+    "return": [
+        "R.id",
+        "W.id"
+    ]
+}

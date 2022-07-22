@@ -1,0 +1,7 @@
+graphdb:
+  image: khaller/graphdb-free
+  environment:
+    TDB: "2"
+  privileged: true
+  ports:
+    - "7200:7200"

@@ -1,0 +1,96 @@
+version: '3.2'
+
+services:
+
+  kitt-v3-ui:
+    container_name: kitt-v3-ui
+    image: datadictionary/kitt_v3_ui_c:integration-mas
+    labels:
+      kompose.image-pull-policy: IfNotPresent
+      kompose.image-pull-secret: regcred
+      kompose.service.type: nodeport
+    links:
+      - kitt-v3-router
+    ports:
+      - "9090:9090"
+    environment:
+      KITT_URL: http://kitt-v3-router:8080
+      UI_PORT: "9090"
+    networks:
+      kitt-network:
+        aliases:
+          - kitt-v3-ui
+
+  kitt-v3-router:
+    container_name: kitt-v3-router
+    image: datadictionary/kitt_v3_router:integration-mas
+    labels:
+      kompose.image-pull-policy: IfNotPresent
+      kompose.image-pull-secret: regcred
+      kompose.service.type: nodeport
+    links:
+      - kitt-v3-graph-store
+      - kitt-v3-user-store
+    ports:
+      - "8080:8080"
+    environment:
+      SERVICENAME: kitt-v3-router
+      SERVICE_DISCOVERY: COMPOSE
+      KITT_LOG_LEVEL: ERROR
+      KITT_AUTH: JWT
+    networks:
+      kitt-network:
+        aliases:
+          - kitt-v3-router
+
+  kitt-v3-graph-store:
+    container_name: kitt-v3-graph-store
+    image: datadictionary/kitt_v3_graph_service:integration-mas
+    labels:
+      kompose.image-pull-policy: IfNotPresent
+      kompose.image-pull-secret: regcred
+    depends_on:
+      - kitt-v3-user-store
+    ports:
+      - "8081:8081"
+    environment:
+      SERVICENAME: kitt-v3-graph-store
+      SERVICE_DISCOVERY: COMPOSE
+      KITT_LOG_LEVEL: ERROR
+      KITT_AUTH: JWT
+    entrypoint:
+      - java
+      - "-Xms6g"
+      - "-Xmx64g"
+      - "-XX:+UseG1GC"
+      - "-XX:+PrintFlagsFinal"
+      - "-cp"
+      - "/app/resources:/app/classes:/app/libs/*"
+      - io.vertx.core.Launcher
+      - run 
+      - com.ibm.research.kitt.graph.KittGraphApp
+    networks:
+      kitt-network:
+        aliases:
+          - kitt-v3-graph-store
+
+  kitt-v3-user-store:
+    container_name: kitt-v3-user-store
+    image: datadictionary/kitt_v3_user_store:integration-mas
+    labels:
+      kompose.image-pull-policy: IfNotPresent
+      kompose.image-pull-secret: regcred
+    ports:
+      - "8086:8086"
+    environment:
+      SERVICENAME: kitt-v3-user-store
+      SERVICE_DISCOVERY: COMPOSE
+      KITT_LOG_LEVEL: ERROR
+      KITT_AUTH: JWT
+    networks:
+      kitt-network:
+        aliases:
+          - kitt-v3-user-store
+
+networks:
+  kitt-network:

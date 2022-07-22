@@ -1,0 +1,21 @@
+{
+    "search": {
+        "R=f:Robot#f:factory0_line_1_robot_0": {
+            "dt:hasOutput": {
+                "f:Belt": {
+                    "dt:hasInput": {
+                        "R1=f:Robot": {
+                            "f:hasWorkorder": {
+                                "W=f:Workorder": null
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "return": [
+        "R1.id",
+        "W.p/open"
+    ]
+}

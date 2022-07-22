@@ -1,0 +1,16 @@
+{
+  "search": {
+    "p=ub:AssociateProfessor#ns4:AssociateProfessor0": {
+      "ub:teacherOf": {
+        "Y=ub:Course": {
+          "<ub:takesCourse<": {
+            "X=ub:Student": null
+          }
+        }
+      }
+    }
+  },
+  "return": [
+    "ALL.id"
+  ]
+}

@@ -1,0 +1,5 @@
+MATCH (w:ns0__Data_Weather_Temperature)<-[:hasData|ns0__hasWorkorder|ns1__hasFile|ns1__hasJson|ns1__hasSeries]-(l)-[:ns0__hasJoint|ns0__hasArm|ns0__hasBelt|ns0__hasRobot|ns0__hasLine*1..5]->(a)-[:hasData|ns0__hasWorkorder|ns1__hasFile|ns1__hasJson|ns1__hasSeries]->(dp:ns0__Data_Power)
+WHERE (a:ns0__Robot OR a:ns0__Robot_ACME OR a:ns0__Robot_Wayne OR a:ns0__Robot_Humanitech OR a:ns0__Belt OR a:ns0__Robot_Arm OR a:ns0__Robot_Tool OR a:ns0__Robot_Joint OR a:ns0__Machine) AND (l:ns0__Line OR l:ns0__Factory)
+MERGE (dp)<-[:ns1__hasInputData]-(fp:ns0__Function_Pred)-[:ns1__hasOutputData]->(dp1:ns0__Data_Power_Pred)
+CREATE (w)<-[:ns1__hasInputData]-(fp)
+RETURN count(*)

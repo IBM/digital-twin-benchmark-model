@@ -1,0 +1,12 @@
+{
+  "search": {
+    "ub:AssistantProfessor#ns10:AssistantProfessor10": {
+      "<ub:publicationAuthor<": {
+        "X=ub:Publication": null
+      }
+    }
+  },
+  "return": [
+    "ALL.id"
+  ]
+}

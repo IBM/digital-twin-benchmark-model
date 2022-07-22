@@ -1,0 +1,19 @@
+{
+    "search": {
+        "F=dt:Function": {
+            "dt:hasInputData": {
+                "IN=dt:Data": null
+            },
+            "dt:hasOutputData": {
+                "OUT=dt:Data": null
+            }
+        }
+    },
+    "return": [
+        "F.id~id=F.id",
+        "F.id~inputs/$IN.id/id=IN.id",
+        "F.id~inputs/$IN.id/key=IN.p/key",
+        "F.id~outputs/$OUT.id/id=OUT.id",
+        "F.id~outputs/$OUT.id/key=OUT.p/key"
+    ]
+}

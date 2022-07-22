@@ -1,0 +1,29 @@
+{
+    "search": {
+        "IN=f:Data_Power":{
+            "<dt:hasData<": {
+                "dt:Asset": {
+                    "<dt:hasPart<":{
+                        "dt:Location": {
+                            "+dt:hasData": {
+                                "+f:Data_Power_Agg": {
+                                    "+<dt:hasOutputData<": {
+                                        "+f:Function_Agg": {
+                                            "+dt:hasInputData": {
+                                                "~IN":null
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "return": [
+        "COUNT"
+    ]
+}
+

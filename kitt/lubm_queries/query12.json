@@ -1,0 +1,16 @@
+{
+  "search": {
+    "ub:University#ns1:www_University0_edu": {
+      "<ub:subOrganizationOf<": {
+        "Y=ub:Department": {
+          "<ub:headOf<": {
+            "X=ub:Professor": null
+          }
+        }
+      }
+    }
+  },
+  "return": [
+    "ALL.id"
+  ]
+}

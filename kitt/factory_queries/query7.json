@@ -1,0 +1,23 @@
+{
+    "search": {
+        "IN=f:Data_Power":{
+            "<dt:hasData<": {
+                "R=dt:Asset": {
+                    "<dt:hasPart{1,5}<": {
+                        "dt:Location": {
+                            "dt:hasData": {
+                                "W=f:Data_Weather_Temperature": null
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "return": [
+        "R.id",
+        "W.id",
+        "IN.id",
+        "IN.p/key"
+    ]
+}

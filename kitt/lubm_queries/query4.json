@@ -1,0 +1,12 @@
+{
+  "search": {
+    "ub:Department#ns1:www_Department0_University0_edu": {
+      "<ub:worksFor<": {
+        "X=ub:Professor": null
+      }
+    }
+  },
+  "return": [
+    "X.p"
+  ]
+}

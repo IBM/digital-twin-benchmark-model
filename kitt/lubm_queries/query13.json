@@ -1,0 +1,12 @@
+{
+  "search": {
+    "ub:University#ns1:www_University0_edu": {
+      "<ub:degreeFrom<": {
+        "X=ub:Person": null
+      }
+    }
+  },
+  "return": [
+    "ALL.id"
+  ]
+}

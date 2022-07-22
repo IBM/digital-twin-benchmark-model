@@ -1,0 +1,20 @@
+{
+  "search": {
+    "Y=ub:University": {
+      "<ub:subOrganizationOf<": {
+        "Z=ub:Department": {
+          "<ub:memberOf<": {
+            "X=ub:GraduateStudent": {
+              "ub:undergraduateDegreeFrom": {
+                "ub:University#~Y": null
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "return": [
+    "ALL.id"
+  ]
+}

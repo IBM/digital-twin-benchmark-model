@@ -1,0 +1,8 @@
+{
+  "search": {
+    "s=ub:UndergraduateStudent": null
+  },
+  "return": [
+    "ALL.id"
+  ]
+}

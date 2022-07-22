@@ -1,0 +1,12 @@
+{
+  "search": {
+    "ub:GraduateCourse#ns4:GraduateCourse0": {
+      "<ub:takesCourse<": {
+        "X=ub:GraduateStudent": null
+      }
+    }
+  },
+  "return": [
+    "ALL.id"
+  ]
+}

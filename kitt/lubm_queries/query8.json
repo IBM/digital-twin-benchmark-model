@@ -1,0 +1,17 @@
+{
+  "search": {
+    "ub:University#ns1:www_University0_edu": {
+      "<ub:subOrganizationOf<": {
+        "Y=ub:Department": {
+          "<ub:memberOf<": {
+            "X=ub:Student": null
+          }
+        }
+      }
+    }
+  },
+  "return": [
+    "X.p",
+    "Y.p"
+  ]
+}

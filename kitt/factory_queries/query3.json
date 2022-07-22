@@ -1,0 +1,13 @@
+{
+    "search": {
+        "f:Factory": {
+            "dt:hasPart{1,10}": {
+                "R=f:Robot": null
+            }
+        }
+    },
+    "return": [
+        "R.id",
+        "R.a"
+    ]
+}

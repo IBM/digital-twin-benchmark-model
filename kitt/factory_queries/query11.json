@@ -1,0 +1,21 @@
+{
+    "search": {
+        "IN=f:Data_State":{
+            "<dt:hasData<": {
+                "A=dt:Asset": null
+            },
+            "+<dt:hasInputData<": {
+                "+f:Function_Pred": {
+                    "+dt:hasOutputData": {
+                        "OUT=+f:Data_State_Agg": null
+                    }
+                }
+            }
+        }
+    },
+    "return": [
+        "A.a~a=A.a",
+        "A.a~input/$IN.id/id=IN.id",
+        "A.a~input/$OUT.id/id=OUT.id"
+    ]
+}

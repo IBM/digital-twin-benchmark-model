@@ -1,0 +1,14 @@
+{
+    "search": {
+        "A=dt:Asset": {
+            "dt:hasData": {
+                "D=dt:Data": null
+            }
+        }
+    },
+    "return": [
+        "A.id",
+        "D.id",
+        "D.p/key"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "search": {
+        "W=f:Data_Weather_Temperature":{
+            "<dt:hasData<": {
+                "dt:Location": {
+                    "dt:hasPart{1,5}": {
+                        "dt:Asset": {
+                            "dt:hasData": {
+                                "f:Data_Power": {
+                                    "+<dt:hasInputData<": {
+                                        "+f:Function_Pred":{
+                                            "+dt:hasOutputData": {
+                                                "+f:Data_Power_Pred":null
+                                            },
+                                            "+dt:hasInputData": {
+                                                "~W":null
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "return": [
+        "COUNT"
+    ]
+}

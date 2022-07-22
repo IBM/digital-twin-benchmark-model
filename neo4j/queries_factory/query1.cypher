@@ -1,0 +1,4 @@
+MATCH (a)-[:ns0__hasWorkorder|ns1__hasFile|ns1__hasJson|ns1__hasSeries|:hasData]->(d) 
+WHERE (a:ns0__Robot OR a:ns0__Robot_ACME OR a:ns0__Robot_Wayne OR a:ns0__Robot_Humanitech OR a:ns0__Belt OR a:ns0__Robot_Arm OR a:ns0__Robot_Tool OR a:ns0__Robot_Joint OR a:ns0__Machine) 
+AND (d:ns0__Data_Asset_History OR d:ns0__Data_Handbook OR d:ns0__Data_OnOff OR d:ns0__Data_State OR d:ns0__Data_Current OR d:ns0__Data_Voltage OR d:ns0__Data_Position_Z OR d:ns0__Data_Position_X OR d:ns0__Data_Position_Y OR d:ns0__Data_Angle_Gamma OR d:ns0__Data_Angle_Beta OR d:ns0__Data_Angle_Alpha OR d:ns0__Data_Power OR d:ns0__Data_Weather_Temperature OR d:ns0__Data_Robot_Temperature OR d:ns0__Data_State_Agg OR d:ns0__Data_Power_Pred OR d:ns0__Data_Power_Agg) 
+RETURN a,d LIMIT 1000
